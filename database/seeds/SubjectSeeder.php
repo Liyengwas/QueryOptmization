@@ -14,16 +14,26 @@ class SubjectSeeder extends Seeder
     public function run()
     {
         //randomize teacher id
+        $data = [];
         $teachers = collect(Teacher::all()->modelKeys());
         
         for($i = 0; $i < 10000; $i++){
+            $data[] = [
             $name = ;
             'name' => ,
             'slug' => ,
             'subject_code' => 1234,
             'teacher_id' => $teachers->random(),
             'description' => 
+            ];
+         
                 
         }
+        
+        foreach($data as $subject){
+            Subject::create($subject);
+        }
+        
+        
     }
 }
